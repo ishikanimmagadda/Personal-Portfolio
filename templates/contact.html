@@ -1,10 +1,15 @@
+{% extends "base.html" %}
+
+{% block title %}Contact Me{% endblock %}
+
+{% block content %}
 <body>
     <h1><i> Want to Contact Me?</i></h1>
-        <p>Enter Your Email & I will reach out soon! <br></p>
-        <form method="GET" action ="#">
-            Email:
-            <input type="text" name="email" id="email"></input>
-            <input type="submit" name="btnemail" id="btnemail"></input>
-      </form>
-    </body>
-    </html>
+    <p>Enter Your Email & I will reach out soon! <br></p>
+    <form method="POST" action="/submit_contact">
+        Email:
+        <input type="text" name="email" id="email">
+        <input type="submit" name="btnemail" id="btnemail">
+    </form>
+</body>
+{% endblock %}
